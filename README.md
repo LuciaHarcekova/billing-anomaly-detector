@@ -1,2 +1,123 @@
-# billing-anomaly-detector
-End-to-end solution for detecting revenue leakage in large-scale billing data. Combines exploratory data analysis, rule-based checks, and machine-learning-powered anomaly detection to uncover hidden billing issues and surface actionable insights.
+# 🚨 Billing Anomaly Detector - Revenue Leakage Detection System
+
+[![Python](https://img.shields.io/badge/Python-3.11-blue.svg)](https://python.org)
+[![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange.svg)](https://jupyter.org)
+[![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-green.svg)](https://scikit-learn.org)
+
+> **Machine learning solution for detecting revenue leakage in billing systems using anomaly detection techniques.**
+
+Companies lose 1-5% of their total revenue annually due to billing system errors, data quality issues, and process inefficiencies. This project demonstrates end-to-end ML flow that automatically identifies suspicious billing records, helping finance teams prioritize investigations and recover lost revenue.
+
+## 🎯 **Business Impact**
+
+- **Revenue Recovery**: Detect potential revenue leakage
+- **Time Savings**: Automated detection replaces manual audit processes  
+- **Precision**: Smart hybrid ensemble optimizes precision
+- **Scalability**
+
+## **Key Workflow Steps**
+1. **Data Ingestion & Integration** → Load and combine datasets
+2. **Feature Engineering & Selection** → Create business validation features
+3. **Exploratory Data Analysis** → Understand patterns and distributions
+4. **Data Preprocessing & Transformation** → Prepare for ML algorithms
+5. **Model Training & Optimization** → Train multiple algorithms
+6. **Model Evaluation & Selection** → Compare and select best approach
+7. **Results Analysis & Business Insights** → Interpret and explain findings
+
+## 📁 **Project Structure**
+
+```
+billing-anomaly-detector/
+├── revenue_leakage_demo.ipynb    # Complete end-to-end ML pipeline (9 steps)
+├── billing_analysis.ipynb        # Comprehensive EDA and feature engineering
+├── README.md                     # This comprehensive guide
+├── .gitignore                    # Git ignore configuration
+└── data/                         #
+    ├── billing_data.csv          # Main billing dataset
+    └── billing_anomaly_data.csv  # Dummy anomalies
+```
+
+## 🤖 **Key Algorithms**
+- **Isolation Forest**: Tree-based anomaly detection with enhanced parameter tuning
+- **DBSCAN**: Density-based clustering with automated parameter optimization
+- **Smart Hybrid Ensemble**: Intelligent combination with performance-based weighting
+
+## 📊 **Dataset Overview**
+
+Real-world billing dataset with feature coverage:
+
+### **Core Billing Columns**
+- `invoice_id`: Unique invoice identifier
+- `customer_id`: Customer identifier with business patterns
+- `country`: Multi-country coverage (US, UK, DE, FR, CA, AU, JP, SG, IN)
+- `currency`: Multi-currency support (USD, GBP, EUR, CAD, AUD, JPY, SGD, INR)
+- `net_value`: Invoice amounts in local currency
+- `tax_rate`: Country-specific tax rates (7%-20%)
+- `tax_amount`: Calculated tax amounts
+- `total_amount`: Net + tax totals
+- `invoice_date`: Temporal billing patterns
+- `service_category`: Business service classifications
+- `invoice_status`: Processing status tracking
+
+### **Possible Anomaly Types**
+1. **Zero/Negative Values**: Invalid transaction amounts
+2. **Tax Calculation Errors**: Mismatched tax rates and computed amounts
+3. **Extreme Outliers**: Unusually high transaction values
+4. **Geographic Inconsistencies**: Invalid currency-country combinations
+
+## 🚀 **Quick Start**
+
+### **1. Environment Setup**
+```bash
+# Clone the repository
+git clone https://github.com/LuciaHarcekova/billing-anomaly-detector.git
+cd billing-anomaly-detector
+
+# Create and activate virtual environment
+python3 -m venv venv
+source venv/bin/activate  # On macOS/Linux
+# venv\Scripts\activate   # On Windows
+
+# Install dependencies
+pip install jupyter pandas numpy scikit-learn matplotlib seaborn scipy
+```
+
+### **2. Prepare Data**
+```bash
+# Place your data files in the project directory:
+# - billing_data.csv (main dataset)
+# - billing_anomaly_data.csv (known anomalies for validation)
+```
+
+### **3. Run the Analysis**
+```bash
+# Start Jupyter Notebook
+jupyter notebook
+
+# Choose your analysis path:
+# 1. revenue_leakage_demo.ipynb - Complete ML pipeline
+# 2. billing_analysis.ipynb - EDA and feature engineering focus
+```
+
+## **Core Libraries**
+- **Data Manipulation**: `pandas`, `numpy`
+- **Machine Learning**: `scikit-learn` (Isolation Forest, DBSCAN, Hybrid Ensemble)
+- **Visualization**: `matplotlib`, `seaborn`
+- **Development**: `jupyter`, `python 3.11+`
+
+## 🏗️ **Production Architecture**
+
+### **Recommended Technology Stack**
+- **☁️ Cloud Platform**: Azure ML / AWS SageMaker / GCP Vertex AI
+- **📊 Data Processing**: Apache Spark / Databricks for large-scale processing
+- **🔄 Streaming**: Apache Kafka / Azure Event Hubs for real-time processing
+- **🤖 ML Ops**: MLflow / Azure ML for model lifecycle management
+- **🐳 Deployment**: Docker + Kubernetes for scalable deployment
+- **📱 API**: FastAPI / Azure Functions for model serving
+- **📊 Dashboards**: Power BI / Tableau for business reporting
+
+### **Scalability Considerations**
+- **Batch Processing**: Handle millions of transactions per day
+- **Real-time Scoring**: Sub-second response times for live transactions
+- **Auto-scaling**: Dynamic resource allocation based on workload
+- **Multi-region**: Global deployment with data residency compliance
