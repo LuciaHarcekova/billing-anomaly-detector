@@ -1,9 +1,8 @@
-# Billing Anomaly Detector - Revenue Leakage Detection System
+# ML Revenue Leakage Detection System
 
 [![Python](https://img.shields.io/badge/Python-3.11-blue.svg)](https://python.org)
 [![Jupyter](https://img.shields.io/badge/Jupyter-Notebook-orange.svg)](https://jupyter.org)
 [![scikit-learn](https://img.shields.io/badge/scikit--learn-ML-green.svg)](https://scikit-learn.org)
-[![GitHub Copilot](https://img.shields.io/badge/Generated%20by-GitHub%20Copilot-purple.svg)](https://github.com/features/copilot)
 
 > **Machine learning solution for detecting revenue leakage in billing systems using anomaly detection techniques.**
 
